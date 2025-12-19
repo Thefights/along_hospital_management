@@ -1,0 +1,127 @@
+import ManageAppointmentDetailDrawerSection from '@/components/basePages/manageAppointmentBasePage/sections/ManageAppointmentDetailDrawerSection'
+import ManageAppointmentFilterBarSection from '@/components/basePages/manageAppointmentBasePage/sections/ManageAppointmentFilterBarSection'
+import ManageAppointmentListItemSection from '@/components/basePages/manageAppointmentBasePage/sections/ManageAppointmentListItemSection'
+import { GenericTablePagination } from '@/components/generals/GenericPagination'
+import { EnumConfig } from '@/configs/enumConfig'
+import useTranslation from '@/hooks/useTranslation'
+import { Paper, Stack, Typography } from '@mui/material'
+import React, { useEffect, useState } from 'react'
+import EmptyBox from '../../placeholders/EmptyBox'
+import SkeletonBox from '../../skeletons/SkeletonBox'
+import ManageAppointmentTabsSection from './sections/ManageAppointmentTabsSection'
+
+const ManageAppointmentBasePage = ({
+	headerTitle = 'Manage Appointments',
+	appointments = [],
+	totalPage = 1,
+	specialties = [],
+	filters,
+	setFilters,
+	page,
+	setPage,
+	pageSize,
+	setPageSize,
+	selectedAppointment,
+	setSelectedAppointment,
+	loading = false,
+	drawerButtons = <React.Fragment />,
+}) => {
+	const [drawerOpen, setDrawerOpen] = useState(false)
+
+	const { t } = useTranslation()
+
+	const onOpenDrawer = (appt) => {
+		setSelectedAppointment(appt)
+		setDrawerOpen(true)
+	}
+
+	useEffect(() => {
+		if (page !== 1) setPage(1)
+	}, [filters, page, setPage])
+
+	return (
+		<Paper sx={{ p: 2 }}>
+			<Stack spacing={2}>
+				<Stack
+					direction='row'
+					alignItems='center'
+					justifyContent='space-between'
+					flexWrap='wrap'
+					rowGap={1}
+				>
+					<Typography variant='h5'>{headerTitle}</Typography>
+					<Stack direction='row' spacing={2}>
+						<Typography variant='body2' sx={{ color: 'text.secondary' }}>
+							[{t('appointment.title.upcoming')}:{' '}
+							{appointments?.reduce(
+								(acc, appt) =>
+									appt &&
+									(appt.appointmentStatus === EnumConfig.AppointmentStatus.Scheduled ||
+										appt.appointmentStatus === EnumConfig.AppointmentStatus.Confirmed)
+										? acc + 1
+										: acc,
+								0
+							)}
+							]
+						</Typography>
+						<Typography variant='body2' sx={{ color: 'text.secondary' }}>
+							[{t('appointment.title.completed')}:{' '}
+							{appointments?.reduce(
+								(acc, appt) =>
+									appt && appt.appointmentStatus === EnumConfig.AppointmentStatus.Completed ? acc + 1 : acc,
+								0
+							)}
+							]
+						</Typography>
+					</Stack>
+				</Stack>
+
+				<ManageAppointmentFilterBarSection
+					filters={filters}
+					setFilters={setFilters}
+					specialties={specialties}
+					loading={loading}
+				/>
+
+				<Stack spacing={2} sx={{ width: '100%' }}>
+					<ManageAppointmentTabsSection filters={filters} setFilters={setFilters} loading={loading} />
+					<Stack spacing={1}>
+						{loading ? (
+							<SkeletonBox numberOfBoxes={3} heights={[268 / 3]} />
+						) : appointments.length === 0 ? (
+							<EmptyBox minHeight={300} />
+						) : (
+							appointments.map((appt, index) => (
+								<ManageAppointmentListItemSection
+									key={appt?.id || index}
+									appointment={appt}
+									onClick={() => onOpenDrawer(appt)}
+								/>
+							))
+						)}
+					</Stack>
+					<Stack justifyContent={'center'} px={2}>
+						<GenericTablePagination
+							totalPage={totalPage}
+							page={page}
+							setPage={setPage}
+							pageSize={pageSize}
+							setPageSize={setPageSize}
+							pageSizeOptions={[5, 10, 20]}
+							loading={loading}
+						/>
+					</Stack>
+				</Stack>
+
+				<ManageAppointmentDetailDrawerSection
+					appointment={selectedAppointment}
+					open={drawerOpen}
+					onClose={() => setDrawerOpen(false)}
+					buttons={drawerButtons}
+				/>
+			</Stack>
+		</Paper>
+	)
+}
+
+export default ManageAppointmentBasePage

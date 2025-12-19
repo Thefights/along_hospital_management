@@ -1,0 +1,48 @@
+{
+    "header": {
+        "home": "Home",
+        "medicine": "Medicine",
+        "service": "Service",
+        "medical_service": "Medical Service",
+        "doctor": "Doctor",
+        "specialty": "Specialty",
+        "booking": "Booking",
+        "appointment": "Appointment",
+        "video_consultation": "Video Consultation",
+        "more": "More",
+        "blog": "Blog",
+        "vouchers": "Vouchers",
+        "about_us": "About Us",
+        "user_menu": {
+            "dashboard": "Dashboard",
+            "profile": "Profile",
+            "appointments": "Appointments",
+            "medical_history": "Medical History",
+            "order_history": "Order History",
+            "my_vouchers": "My Vouchers",
+            "change_password": "Change Password",
+            "setting": "Setting",
+            "logout": "Logout"
+        },
+        "meeting_room": "Join Meeting Room"
+    },
+    "footer": {
+        "__________comment1": "For footer section links",
+        "medical": "Medical",
+        "resources": "Resources",
+        "support": "Support",
+        "about": "About",
+        "__________comment2": "For footer section titles",
+        "medical_service": "Medical Service",
+        "doctor": "Doctor",
+        "specialty": "Specialty",
+        "blog": "Blog",
+        "medicine": "Medicine",
+        "contact_us": "Contact Us",
+        "faq": "FAQ",
+        "privacy_policy": "Privacy Policy",
+        "terms_of_service": "Terms of Service",
+        "our_hospital": "Our Hospital",
+        "career": "Career"
+    }
+}

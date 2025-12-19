@@ -1,0 +1,112 @@
+export const routeUrls = {
+	BASE_ROUTE: {
+		AUTH: (route = '') => `/auth${route}`,
+		PATIENT: (route = '') => `/patient${route}`,
+		DOCTOR: (route = '') => `/doctor${route}`,
+		MANAGER: (route = '') => `/manager${route}`,
+	},
+	HOME: {
+		INDEX: '/',
+		MEDICAL_SERVICE: '/medical-service',
+		MEDICINE: '/medicine',
+		SPECIALTY: '/specialty',
+		DOCTOR: '/doctors',
+		BLOG: '/blog',
+		ABOUT_US: '/about-us',
+		CONTACT: '/contact',
+		TERMS_OF_SERVICE: '/terms-of-service',
+		PRIVACY_POLICY: '/privacy-policy',
+		CAREER: '/career',
+		FAQ: '/faq',
+		VOUCHERS: '/vouchers',
+		MEDICAL_HISTORY_INVOICE: (id) => `/medical-history/invoice/${id}`,
+		MEDICAL_HISTORY_PRINT_PRESCRIPTION: (id) => `/medical-history/print-prescription/${id}`,
+		PAYMENT: {
+			RETURN: '/payment/return',
+			CANCEL: '/payment/cancel',
+		},
+	},
+	AUTH: {
+		LOGIN: '/login',
+		REGISTER: '/register',
+		CHANGE_PASSWORD: '/change-password',
+		FORGOT_PASSWORD: '/forgot-password',
+		VERIFY: '/verify',
+		RESEND_LINK: '/resend-link',
+		RESET_PASSWORD: '/reset-password',
+		COMPLETE_PROFILE: '/complete-profile',
+		ENROLL_STAFF_IDENTIFICATION: '/enroll-staff-identification',
+	},
+	PATIENT: {
+		CART: '/cart',
+		PROFILE: '/profile',
+		FEEDBACK: '/feedback',
+		MEDICAL_HISTORY: {
+			INDEX: '/medical-history',
+			DETAIL: (id) => `/medical-history/${id}`,
+		},
+		ORDER_HISTORY: {
+			INDEX: '/order-history',
+			DETAIL: (id) => `/order-history/${id}`,
+		},
+		APPOINTMENT: {
+			JOIN_MEETING_ROOM: `/appointments/join-meeting-room`,
+			MEETING_ROOM_TOKEN: (id) => `/appointments/meeting-room-token/${id}`,
+			MEETING_ROOM_COMPLETE: (id) => `/appointments/meeting-room-token/${id}/complete`,
+			INDEX: '/appointment',
+			CREATE: '/appointment/create',
+		},
+		VIDEO_CONSULTATION: '/video-consultation',
+		VOUCHER: {
+			MY_VOUCHERS: '/my-vouchers',
+		},
+	},
+	DOCTOR: {
+		DASHBOARD: '/',
+		PROFILE: '/profile',
+		APPOINTMENT_MANAGEMENT: '/appointment',
+		APPOINTMENT: {
+			JOIN_MEETING_ROOM: `/appointments/join-meeting-room`,
+		},
+		ATTENDANCE: '/attendance',
+		MEDICAL_HISTORY: {
+			INDEX: '/medical-history',
+			CREATE: '/medical-history/create',
+			DETAIL: (id) => `/medical-history/${id}`,
+		},
+	},
+
+	MANAGER: {
+		DASHBOARD: '/',
+		PROFILE: '/profile',
+		APPOINTMENT_MANAGEMENT: '/appointment',
+		BLOG: {
+			INDEX: '/blogs',
+			CREATE: '/blogs/create',
+			UPDATE: (blogId = ':id') => `/blogs/edit/${blogId}`,
+		},
+		MEDICAL_HISTORY: {
+			INDEX: '/medical-history',
+			DETAIL: (id) => `/medical-history/${id}`,
+		},
+		MEDICINE_MANAGEMENT: {
+			INDEX: '/medicine',
+		},
+		MEDICINE_CATEGORY_MANAGEMENT: {
+			INDEX: '/medicine-category',
+		},
+		IMPORT_MANAGEMENT: {
+			INDEX: '/import-management',
+		},
+		COMPLAINT_MANAGEMENT: '/complaint',
+		SPECIALTY_MANAGEMENT: '/specialty',
+		DEPARTMENT_MANAGEMENT: '/department',
+		MEDICAL_SERVICE_MANAGEMENT: '/medical-service',
+		VOUCHER_MANAGEMENT: '/voucher',
+		DOCTOR_MANAGEMENT: '/doctor',
+		FEEDBACK_REPORT_MANAGEMENT: '/feedback-report',
+		ATTENDANCE_MANAGEMENT: '/attendance',
+		SUPPLIER_MANAGEMENT: '/supplier',
+		ORDER_MANAGEMENT: '/order',
+	},
+}
