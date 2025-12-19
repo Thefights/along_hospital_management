@@ -208,7 +208,7 @@ const HeroSection = () => {
 							<Box
 								component='img'
 								src='/doctor-hero.png'
-								alt='Healthcare Professional'
+								alt={t('text.alt.healthcare_professional')}
 								onError={(e) => {
 									e.currentTarget.style.display = 'none'
 								}}

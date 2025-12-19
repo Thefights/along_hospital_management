@@ -65,6 +65,11 @@
         "placeholder": {
             "no_data": "No data available...",
             "no_data_subtitle": "There is nothing to display here"
+        },
+        "alt": {
+            "healthcare_professional": "Healthcare Professional",
+            "doctor": "Doctor",
+            "patient_name": "Patient Name"
         }
     },
     "tooltip": {

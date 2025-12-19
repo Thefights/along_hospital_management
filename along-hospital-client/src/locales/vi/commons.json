@@ -64,6 +64,11 @@
         "placeholder": {
             "no_data": "Không có dữ liệu...",
             "no_data_subtitle": "Không có gì để hiển thị ở đây"
+        },
+        "alt": {
+            "healthcare_professional": "Chuyên gia y tế",
+            "doctor": "Bác sĩ",
+            "patient_name": "Tên bệnh nhân"
         }
     },
     "tooltip": {

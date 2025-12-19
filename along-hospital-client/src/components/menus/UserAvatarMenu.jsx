@@ -21,7 +21,7 @@ const UserAvatarMenu = ({ profile, items = [], onLogout }) => {
 	const listRefs = useRef([])
 	const navigate = useNavigate()
 	const { t } = useTranslation()
-	const name = profile?.name || 'Patient Name'
+	const name = profile?.name || t('text.alt.patient_name')
 	const email = profile?.email || 'patient@example.com'
 	const avatarUrl = profile?.avatarUrl
 	const initials = name

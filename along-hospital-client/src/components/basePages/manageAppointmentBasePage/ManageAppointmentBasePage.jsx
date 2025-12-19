@@ -11,7 +11,7 @@ import SkeletonBox from '../../skeletons/SkeletonBox'
 import ManageAppointmentTabsSection from './sections/ManageAppointmentTabsSection'
 
 const ManageAppointmentBasePage = ({
-	headerTitle = 'Manage Appointments',
+	headerTitle,
 	appointments = [],
 	totalPage = 1,
 	specialties = [],
@@ -27,7 +27,6 @@ const ManageAppointmentBasePage = ({
 	drawerButtons = <React.Fragment />,
 }) => {
 	const [drawerOpen, setDrawerOpen] = useState(false)
-
 	const { t } = useTranslation()
 
 	const onOpenDrawer = (appt) => {
@@ -49,10 +48,12 @@ const ManageAppointmentBasePage = ({
 					flexWrap='wrap'
 					rowGap={1}
 				>
-					<Typography variant='h5'>{headerTitle}</Typography>
+					<Typography variant='h5'>
+						{headerTitle || t('appointment.title.appointment_management')}
+					</Typography>
 					<Stack direction='row' spacing={2}>
 						<Typography variant='body2' sx={{ color: 'text.secondary' }}>
-							[{t('appointment.title.upcoming')}:{' '}
+							[{t('appointments.title.upcoming')}:{' '}
 							{appointments?.reduce(
 								(acc, appt) =>
 									appt &&

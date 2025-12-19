@@ -12,7 +12,7 @@ const DoctorInfoHeader = ({
 		<>
 			<Avatar
 				src={avatarUrl || t('meeting_room.doctor_avatar_url')}
-				alt='Doctor'
+				alt={t('text.alt.doctor')}
 				sx={{ width: 96, height: 96 }}
 			/>
 			<Box sx={{ textAlign: 'center' }}>

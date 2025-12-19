@@ -64,6 +64,28 @@
             "subtitle": "Những gì bệnh nhân nói về chúng tôi",
             "text": {
                 "no_testimonials": "Chưa có đánh giá nào"
+            },
+            "mock_data": {
+                "patient_1": {
+                    "name": "Nguyễn Văn A",
+                    "comment": "Dịch vụ tuyệt vời! Bác sĩ rất tận tâm và chu đáo. Tôi rất hài lòng với chất lượng khám chữa bệnh tại đây.",
+                    "service": "Khám tổng quát"
+                },
+                "patient_2": {
+                    "name": "Trần Thị B",
+                    "comment": "Cơ sở vật chất hiện đại, nhân viên thân thiện. Đội ngũ y bác sĩ chuyên nghiệp và giàu kinh nghiệm.",
+                    "service": "Xét nghiệm"
+                },
+                "patient_3": {
+                    "name": "Lê Văn C",
+                    "comment": "Quy trình khám nhanh gọn, không mất thời gian chờ đợi. Bác sĩ tư vấn rất kỹ càng và dễ hiểu.",
+                    "service": "Chẩn đoán hình ảnh"
+                },
+                "patient_4": {
+                    "name": "Phạm Thị D",
+                    "comment": "Tôi đã khám ở nhiều bệnh viện nhưng đây là nơi tôi cảm thấy yên tâm nhất. Cảm ơn đội ngũ bác sĩ!",
+                    "service": "Cấp cứu"
+                }
             }
         },
         "statistics": {

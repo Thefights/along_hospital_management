@@ -51,76 +51,76 @@ const LayoutManager = () => {
 			items: [
 				{
 					key: 'dashboard',
-					label: 'Dashboard',
+					label: t('sidebar.dashboard'),
 					icon: <DashboardRounded />,
 					url: routeUrls.BASE_ROUTE.MANAGER(),
 				},
 			],
 		},
 		{
-			title: 'Clinical Management',
+			title: t('sidebar.clinical_management'),
 			items: [
 				{
 					key: 'appointment',
-					label: 'Appointment',
+					label: t('sidebar.appointment'),
 					icon: <EventAvailableRounded />,
 					url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.APPOINTMENT_MANAGEMENT),
 				},
 				{
 					key: 'medical-history',
-					label: 'Medical History',
+					label: t('sidebar.medical_history'),
 					icon: <DescriptionRounded />,
 					url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.MEDICAL_HISTORY.INDEX),
 				},
 				{
 					key: 'medical-service',
-					label: 'Medical Service',
+					label: t('sidebar.medical_service'),
 					icon: <AssignmentRounded />,
 					url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.MEDICAL_SERVICE_MANAGEMENT),
 				},
 			],
 		},
 		{
-			title: 'Commerce & Inventory',
+			title: t('sidebar.commerce_inventory'),
 			items: [
 				{
 					key: 'order',
-					label: 'Order',
+					label: t('sidebar.order'),
 					icon: <ReceiptLongRounded />,
 					url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.ORDER_MANAGEMENT),
 				},
 				{
 					key: 'voucher',
-					label: 'Voucher',
+					label: t('sidebar.voucher'),
 					icon: <DiscountRounded />,
 					url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.VOUCHER_MANAGEMENT),
 				},
 				{
 					key: 'inventory',
-					label: 'Inventory',
+					label: t('sidebar.inventory'),
 					icon: <Inventory2Rounded />,
 					of: [
 						{
 							key: 'medicine',
-							label: 'Medicine',
+							label: t('sidebar.medicine'),
 							icon: <LocalPharmacyRounded />,
 							url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.MEDICINE_MANAGEMENT.INDEX),
 						},
 						{
 							key: 'medicine-category',
-							label: 'Medicine Category',
+							label: t('sidebar.medicine_category'),
 							icon: <CategoryRounded />,
 							url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.MEDICINE_CATEGORY_MANAGEMENT.INDEX),
 						},
 						{
 							key: 'import',
-							label: 'Import',
+							label: t('sidebar.import'),
 							icon: <FileUploadRounded />,
 							// url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.IMPORT_MANAGEMENT),
 						},
 						{
 							key: 'supplier',
-							label: 'Supplier',
+							label: t('sidebar.supplier'),
 							icon: <BadgeRounded />,
 							url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.SUPPLIER_MANAGEMENT),
 						},
@@ -128,29 +128,29 @@ const LayoutManager = () => {
 				},
 				{
 					key: 'import',
-					label: 'Import Management',
+					label: t('sidebar.import_management'),
 					icon: <FileUploadRounded />,
 					url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.IMPORT_MANAGEMENT.INDEX),
 				},
 			],
 		},
 		{
-			title: 'Human Resource',
+			title: t('sidebar.human_resource'),
 			items: [
 				{
 					key: 'organization',
-					label: 'Organization',
+					label: t('sidebar.organization'),
 					icon: <ApartmentRounded />,
 					of: [
 						{
 							key: 'department',
-							label: 'Department',
+							label: t('sidebar.department'),
 							icon: <DomainRounded />,
 							url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.DEPARTMENT_MANAGEMENT),
 						},
 						{
 							key: 'specialty',
-							label: 'Specialty',
+							label: t('sidebar.specialty'),
 							icon: <WorkOutlineRounded />,
 							url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.SPECIALTY_MANAGEMENT),
 						},
@@ -158,12 +158,12 @@ const LayoutManager = () => {
 				},
 				{
 					key: 'employee',
-					label: 'Employee',
+					label: t('sidebar.employee'),
 					icon: <PersonRounded />,
 					of: [
 						{
 							key: 'doctor',
-							label: 'Doctor',
+							label: t('sidebar.doctor'),
 							icon: <PersonAddAlt1Rounded />,
 							url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.DOCTOR_MANAGEMENT),
 						},
@@ -171,24 +171,24 @@ const LayoutManager = () => {
 				},
 				{
 					key: 'workforce',
-					label: 'Workforce',
+					label: t('sidebar.workforce'),
 					icon: <WorkHistoryRounded />,
 					of: [
 						{
 							key: 'attendance',
-							label: 'Attendance',
+							label: t('sidebar.attendance'),
 							icon: <CheckBoxRounded />,
 							url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.ATTENDANCE_MANAGEMENT),
 						},
 						{
 							key: 'shift',
-							label: 'Shift',
+							label: t('sidebar.shift'),
 							icon: <Delete />,
 							// url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.SHIFT_MANAGEMENT),
 						},
 						{
 							key: 'payroll',
-							label: 'Payroll',
+							label: t('sidebar.payroll'),
 							icon: <Delete />,
 							// url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.PAYROLL_MANAGEMENT),
 						},
@@ -197,23 +197,23 @@ const LayoutManager = () => {
 			],
 		},
 		{
-			title: 'Customer & Support',
+			title: t('sidebar.customer_support'),
 			items: [
 				{
 					key: 'blog',
-					label: 'Blog',
+					label: t('sidebar.blog'),
 					icon: <ArticleRounded />,
 					url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.BLOG.INDEX),
 				},
 				{
 					key: 'feedback-report',
-					label: 'Feedback Report',
+					label: t('sidebar.feedback_report'),
 					icon: <QuestionAnswerRounded />,
 					url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.FEEDBACK_REPORT_MANAGEMENT),
 				},
 				{
 					key: 'complaint',
-					label: 'Complaint',
+					label: t('sidebar.complaint'),
 					icon: <FlagRounded />,
 					url: routeUrls.BASE_ROUTE.MANAGER(routeUrls.MANAGER.COMPLAINT_MANAGEMENT),
 				},

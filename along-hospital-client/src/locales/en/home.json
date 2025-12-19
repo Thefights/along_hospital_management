@@ -64,6 +64,28 @@
             "subtitle": "What our patients say about us",
             "text": {
                 "no_testimonials": "No testimonials available"
+            },
+            "mock_data": {
+                "patient_1": {
+                    "name": "John Smith",
+                    "comment": "Excellent service! The doctors are very dedicated and attentive. I'm very satisfied with the quality of care here.",
+                    "service": "General Checkup"
+                },
+                "patient_2": {
+                    "name": "Mary Johnson",
+                    "comment": "Modern facilities, friendly staff. The medical team is professional and experienced.",
+                    "service": "Laboratory Tests"
+                },
+                "patient_3": {
+                    "name": "David Lee",
+                    "comment": "Quick and efficient examination process with no waiting time. The doctor's consultation was thorough and easy to understand.",
+                    "service": "Diagnostic Imaging"
+                },
+                "patient_4": {
+                    "name": "Sarah Williams",
+                    "comment": "I've been to many hospitals, but this is where I feel most at ease. Thank you to the medical team!",
+                    "service": "Emergency Care"
+                }
             }
         },
         "statistics": {

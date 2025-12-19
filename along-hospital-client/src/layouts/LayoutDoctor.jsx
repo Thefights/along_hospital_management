@@ -34,7 +34,7 @@ const LayoutDoctor = () => {
 			items: [
 				{
 					key: 'dashboard',
-					label: 'Dashboard',
+					label: t('sidebar.dashboard'),
 					icon: <DashboardRounded />,
 					url: routeUrls.BASE_ROUTE.DOCTOR(),
 				},
@@ -45,13 +45,13 @@ const LayoutDoctor = () => {
 			items: [
 				{
 					key: 'appointment',
-					label: 'Appointments',
+					label: t('sidebar.appointments'),
 					icon: <EventAvailableRounded />,
 					url: routeUrls.BASE_ROUTE.DOCTOR(routeUrls.DOCTOR.APPOINTMENT_MANAGEMENT),
 				},
 				{
 					key: 'medical-history',
-					label: 'Medical History',
+					label: t('sidebar.medical_history'),
 					icon: <DescriptionRounded />,
 					url: routeUrls.BASE_ROUTE.DOCTOR(routeUrls.DOCTOR.MEDICAL_HISTORY.INDEX),
 				},
@@ -62,7 +62,7 @@ const LayoutDoctor = () => {
 			items: [
 				{
 					key: 'attendance',
-					label: 'Attendance',
+					label: t('sidebar.attendance'),
 					icon: <EventRounded />,
 					url: routeUrls.BASE_ROUTE.DOCTOR(routeUrls.DOCTOR.ATTENDANCE),
 				},
@@ -74,7 +74,7 @@ const LayoutDoctor = () => {
 				{ key: 'settings', label: 'Settings', icon: <SettingsRounded />, url: '/settings' },
 				{
 					key: 'join-tele-room',
-					label: 'Join Meeting Room',
+					label: t('sidebar.join_meeting_room'),
 					icon: <VideocamOffRounded />,
 					url: routeUrls.BASE_ROUTE.DOCTOR(routeUrls.DOCTOR.APPOINTMENT.JOIN_MEETING_ROOM),
 				},

@@ -25,43 +25,39 @@ const TestimonialSection = () => {
 	const testimonials = [
 		{
 			id: 1,
-			name: 'Nguyễn Văn A',
+			name: t('home.testimonial.mock_data.patient_1.name'),
 			avatar: null,
 			rating: 5,
-			comment:
-				'Dịch vụ tuyệt vời! Bác sĩ rất tận tâm và chu đáo. Tôi rất hài lòng với chất lượng khám chữa bệnh tại đây.',
+			comment: t('home.testimonial.mock_data.patient_1.comment'),
 			date: '2024-01-15',
-			service: 'Khám tổng quát',
+			service: t('home.testimonial.mock_data.patient_1.service'),
 		},
 		{
 			id: 2,
-			name: 'Trần Thị B',
+			name: t('home.testimonial.mock_data.patient_2.name'),
 			avatar: null,
 			rating: 5,
-			comment:
-				'Cơ sở vật chất hiện đại, nhân viên thân thiện. Đội ngũ y bác sĩ chuyên nghiệp và giàu kinh nghiệm.',
+			comment: t('home.testimonial.mock_data.patient_2.comment'),
 			date: '2024-01-20',
-			service: 'Xét nghiệm',
+			service: t('home.testimonial.mock_data.patient_2.service'),
 		},
 		{
 			id: 3,
-			name: 'Lê Văn C',
+			name: t('home.testimonial.mock_data.patient_3.name'),
 			avatar: null,
 			rating: 5,
-			comment:
-				'Quy trình khám nhanh gọn, không mất thời gian chờ đợi. Bác sĩ tư vấn rất kỹ càng và dễ hiểu.',
+			comment: t('home.testimonial.mock_data.patient_3.comment'),
 			date: '2024-02-01',
-			service: 'Chẩn đoán hình ảnh',
+			service: t('home.testimonial.mock_data.patient_3.service'),
 		},
 		{
 			id: 4,
-			name: 'Phạm Thị D',
+			name: t('home.testimonial.mock_data.patient_4.name'),
 			avatar: null,
 			rating: 5,
-			comment:
-				'Tôi đã khám ở nhiều bệnh viện nhưng đây là nơi tôi cảm thấy yên tâm nhất. Cảm ơn đội ngũ bác sĩ!',
+			comment: t('home.testimonial.mock_data.patient_4.comment'),
 			date: '2024-02-10',
-			service: 'Cấp cứu',
+			service: t('home.testimonial.mock_data.patient_4.service'),
 		},
 	]
 
