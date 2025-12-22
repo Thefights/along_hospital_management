@@ -131,5 +131,13 @@
         "fill_all_required": "Please fill all required fields",
         "invalid_percentage": "Percentage must be between 0 and 100",
         "past_date": "Date cannot be in the past"
+    },
+    "not_found": {
+        "title": "Page Not Found",
+        "description": "Sorry, the page you are looking for doesn't exist or has been moved. Please check the URL or return to the homepage.",
+        "button": {
+            "back_home": "Back to Home",
+            "go_back": "Go Back"
+        }
     }
 }

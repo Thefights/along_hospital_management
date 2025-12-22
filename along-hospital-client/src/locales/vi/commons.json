@@ -130,5 +130,13 @@
         "fill_all_required": "Vui lòng điền tất cả các trường bắt buộc",
         "invalid_percentage": "Phần trăm phải từ 0 đến 100",
         "past_date": "Ngày không được ở quá khứ"
+    },
+    "not_found": {
+        "title": "Không tìm thấy trang",
+        "description": "Rất tiếc, trang bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển. Vui lòng kiểm tra lại đường dẫn hoặc quay về trang chủ.",
+        "button": {
+            "back_home": "Về trang chủ",
+            "go_back": "Quay lại"
+        }
     }
 }
